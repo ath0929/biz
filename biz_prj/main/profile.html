@@ -10,23 +10,48 @@
             background-color: blue;
         }
         .item{
-            width: 150px;
-            height: 150px;
+            width: 80px;
+            height: 80px;
             border: gray 1px solid;
+            /*display: inline-block;*/
         }
+        .box{
+            background-color: red;
+            left: 20px;
+            top: 50px;
+            position: absolute;
+        }
+        .color1{
+            background-color: brown;
+        }
+        .color2{
+            background-color: rgb(255, 251, 0);
+        }
+        .color3{
+            background-color: rgb(255, 0, 0);
+        }
+        .color4{
+            background-color: green;
+        }
+        .color5{
+            background-color: blueviolet;
+        }
+        
     </style>
 </head>
 <body>
     <h1>안태후 입니다.</h1>
-    <div class="item color1">001</div>
-    <div class="item color2">002</div>
-    <div class="item color3">003</div>
-    <div class="item color4">004</div>
-    <div class="item color5">005</div>
-    <div class="item color1">006</div>
-    <div class="item color2">007</div>
-    <div class="item color3">008</div>
-    <div class="item color4">009</div>
-    <div class="item color5">010</div>
+    <div class="containor">
+        <div class="item color1">001</div>
+        <div class="item box">002</div>
+        <div class="item color3">003</div>
+        <div class="item color4">004</div>
+        <div class="item color5">005</div>
+        <div class="item color1">006</div>
+        <div class="item color2">007</div>
+        <div class="item color3">008</div>
+        <div class="item color4">009</div>
+        <div class="item color5">010</div>
+    </div>
 </body>
 </html>
