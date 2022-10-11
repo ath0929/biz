@@ -2,63 +2,94 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXMCNJFCE8"></script>
-<script src="https://kit.fontawesome.com/e3c3db92c3.js" crossorigin="anonymous"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GXMCNJFCE8');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NJ964BTDQ"></script>
+    <script src="https://kit.fontawesome.com/a5c2906144.js" crossorigin="anonymous"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9NJ964BTDQ');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="ga, it관련 블로그, e비즈니스">
-    <meta name="author" content="an tae hu">
-    <title>welcome to taehu's site</title>
+    <meta name="keyword" content="GA, 블로그 IT 관련 블로그, e비즈니스">
+    <meta name="author" content="joo hyeong geun">
+    <title>Welcome to taehu</title>
     <style>
-        header, footer{
-            
+        *
+        {
+            font-family:Arial, Helvetica, serif;
+            line-height: 150%
+        }
+        body
+        {
+            margin-top: 20px;
+            margin: 0 auto;
+            max-width: 980;
+        }
+        header, footer
+        {
             height: 100px;
         }
-        footer{
-            
+        header h1{
+            display: inline;
+        }
+        footer
+        {
             background-color: gray;
         }
-        nav{
+        nav
+        {
             height: 50px;
         }
-        section{
+        section
+        {
             display: flex;
         }
-      
-        
-        .content{
+        .content
+        {
             flex: 4;
         }
-        aside{
+        aside
+        {
             flex: 1;
-            
+        }
+        ul{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        nav ul li{
+            display: inline;
+            padding: 15px 20px;
+            letter-spacing: 5px;
+        }
+        nav ul li:hover{
+            background-color: bisque;
+        }
+        nav ul{
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <header id="home">
-        <img src="./images/logo.jpg" alt="CI">
-        <h1>
-            taehu's site
-        </h1> 
+    <header id ="home">
+        <i class="fa-solid fa-burger"></i>
+        <h1>taehu's site</h1>
     </header>
     <nav>
-        <!-- ui>li*{메인메뉴$$} -->
-    
-        <ui>
-            <li><a herf ="a">소개</a></li>
-            <li><a herf ="a">쇼핑</a></li>
-            <li><a herf ="a">패키지</a></li>
-            <li><a herf ="a">커뮤니티</a></li>
-        </ui>
+        <!-- 점 -->
+        <!-- ul>li*4{메인메뉴$$} -->
+        <ul>
+            <li><a href="#">소개</a></li>
+            <li><a href="#">쇼핑</a></li>
+            <li><a href="#">패키지</a></li>
+            <li><a href="#">커뮤니티</a></li>
+        </ul>
+        <!-- 숫자 -->
+        <!-- ol>li*3{연습$} -->
         <ol type="i">
             <li>연습1</li>
             <li>연습2</li>
@@ -66,80 +97,74 @@
         </ol>
     </nav>
     <section>
-        <article>
-            <div class="bigdata">
-                <img src="./images/bigdata.jpg" alt="메인이미지" width="50%">  
-            </div>
-            <h2>나의 대외활동 이력</h2>
-            <table border="2">
-                <tr>
-                    <th>기간</th>
-                    <th>대외활동</th>
-                    <th>주최</th>
-                </tr>
-                <tr>
-                    <td>2021 3월</td>
-                    <td>마케팅경진대회</td>
-                    <td>정보학회</td>
-                </tr>
-                <tr>
-                    <td>2022.5</td>
-                    <td>GA 교육프로그램</td>
-                    <td>동의대학교</td>
-                </tr>
-                <tr>
-                    <td>2022.8</td>
-                    <td>온라인 쇼핑몰 기획</td>
-                    <td>중소기업장</td>
-                </tr>
-            </table>
-            <table border="1">
-                <tr>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                </tr>
-                <tr>
-                    <td>데이터1</td>
-                    <td>데이터2</td>
-                    <td>데이터3</td>
-                </tr>
-            </table>
-        </article>
-        <article>
-        <div class="media">
-                <h2>좋아하는 음악</h2>
-                <audio src="./media/music01.mp3" controls></audio>
-            
-            <h2>북극곰 환경을 살리자</h2>
-            <video src="./media/movie.mp4" controls></video>
-            <h2>손흥민 활약상</h2>
-            <iframe width="1280" height="720" src="https://www.youtube.com/embed/_DVtQ8FbDNU" title="대형견 키우기 힘든 이유" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>    
-        </article>
-        <article>
-            <div class="gallary">
-                <iframe src="./gallary.html" frameborder="0" width="70%" height="400px"></iframe>   
-            </div>
-        </article>
+        <div class="content">
+            <article>
+                <div class="bigdata">
+                    <img src="./images/bigdata.jpg" alt="메인이미지" width="20%" height="">
+                </div>
+                <div class="action">
+                    <h2>나의 대외활동 이력</h2>
+                    <!-- table>tr>th*3^tr*3>td*3 -->
+                    <table border="5">
+                        <tr>
+                            <th>기간</th>
+                            <th>대외활동</th>
+                            <th>주최</th>
+                        </tr>
+                        <tr>
+                            <td>2021.3</td>
+                            <td>마케팅경진대회</td>
+                            <td>정보학회</td>
+                        </tr>
+                        <tr>
+                            <td>2022.5</td>
+                            <td>GA 교육프로그램</td>
+                            <td>동의대학교</td>
+                        </tr>
+                        <tr>
+                            <td>2022.8</td>
+                            <td>온라인 쇼핑몰 기획 공모전</td>
+                            <td>중소기업청</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+            <br><hr><br>
+            <article>
+                <div class="media">
+                    <h2>좋아하는 음악</h2>
+                    <audio src="./media/music01.mp3" controls></audio>
+                    <h2>곰 환경을 살리자</h2>
+                    <video src="./media/movie.mp4" width="50%" controls></video>
+                    <h2>손흥민 활약상</h2>
+                    
+                    <iframe frameborder = "0" width="1280" height="720" src="https://www.youtube.com/embed/pNqfHsppv90" title="[뮤직뱅크 월간 차트 TOP10] 2022년 8월 인기 무대 모음👍 All Stages at Music Bank of KBS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </article>
+            <article>
+                <div class="gallery">
+                    <iframe src="./gallery.html" frameborder="0" width="70%" height="220px"></iframe>
+                </div>
+            </article>
+        </div>
         <aside>
             <div class="link">
-                <a href="http://mis.deu.ac.kr">경영정보학과 사이트</a><br>
-                <a href="./gallary.html">갤러리</a><br>
+                <a href="http://mis.deu.ac.kr" target="_blank">경영정보학과 사이트</a><br>
+                <a href="./gallery.html">갤러리</a><br>
                 <a href="#home">시작이동</a>
             </div>
             <div class="login">
                 <h2>로그인</h2>
-                <form action ="#" method="get">
-                    회원ID: <input type="text" name="id"><br>
-                    비밀번호: <input type="password" name="pw"><br> 
-                    남자 <input type="radio" name="gender" value="1"> 여자 <input type="radio" name="gender" value="2"><br>
+                <form action="#" method="post">
+                    회원ID : <input type="text" name="id"><br>
+                    비밀번호 : <input type="password" name="pw"><br>
+                    남자 : <input type="radio" name="gender" value="1"> 여자 : <input type="radio" name="gender" value="2"><br>
                     <input type="submit" value="로그인"><br>
                     <input type="reset" value="재설정">
-
                 </form>
             </div>
         </aside>
+        
     </section>
     <footer>
         저작권과 주소
@@ -148,6 +173,5 @@
             <i class="fa-brands fa-twitter"></i>
         </div>
     </footer>
-    
 </body>
 </html>
