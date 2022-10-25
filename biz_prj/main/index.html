@@ -14,25 +14,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keyword" content="GA, 블로그 IT 관련 블로그, e비즈니스">
-    <meta name="author" content="joo hyeong geun">
+    <meta name="author" content="an taehu">
+    <link rel="stylesheet" href="./css/mystyle.css" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Welcome to taehu</title>
     <style>
         *
         {
-            font-family:Arial, Helvetica, serif;
-            line-height: 150%
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 150%; 
         }
         body
         {
             margin-top: 20px;
             margin: 0 auto;
-            max-width: 980;
+            max-width: 980px;
         }
         header, footer
         {
             height: 100px;
         }
-        header h1{
+        header h1 
+        {
             display: inline;
         }
         footer
@@ -55,37 +58,79 @@
         {
             flex: 1;
         }
-        ul{
+        ul
+        {
             list-style-type: none;
         }
-        a{
+        a
+        {
             text-decoration: none;
         }
-        nav ul li{
+        nav ul li
+        {
             display: inline;
-            padding: 15px 20px;
+            padding: 15px 30px;
             letter-spacing: 5px;
         }
-        nav ul li:hover{
-            background-color: bisque;
+        nav ul li:hover
+        {
+            background-color: lawngreen;
         }
-        nav ul{
+        nav ul
+        {
+            border-top: 2px solid lawngreen;
+            border-bottom: 2px solid lawngreen;
+            padding: 10px 20px;
             text-align: center;
+        }
+        .bigdata img
+        {
+            padding-top: 50px;
+            width: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+        .action table
+        {
+            margin: 0 auto;
+            width: 90%;
+            font-size: 1.22em;
+            border: 0px;
+        }
+        .action table th
+        {
+            background-color: yellow;
+        }
+        .video iframe
+        {
+            width: 70%;
+            margin: 0 auto;
+        }
+        .button 
+        {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+             padding: 15px 32px;
+             text-align: center;
+            text-decoration: none;
+             display: inline-block;
+             font-size: 16px;
         }
     </style>
 </head>
 <body>
     <header id ="home">
         <i class="fa-solid fa-burger"></i>
-        <h1>taehu's site</h1>
+        <h1>taehu site</h1>
     </header>
     <nav>
         <!-- 점 -->
         <!-- ul>li*4{메인메뉴$$} -->
         <ul>
-            <li><a href="#">소개</a></li>
-            <li><a href="#">쇼핑</a></li>
-            <li><a href="#">패키지</a></li>
+            <li><a href="./index.html">소개</a></li>
+            <li><a href="./shop/computer.html">쇼핑</a></li>
+            <li><a href="./event/event.html">패키지</a></li>
             <li><a href="#">커뮤니티</a></li>
         </ul>
         <!-- 숫자 -->
@@ -100,12 +145,12 @@
         <div class="content">
             <article>
                 <div class="bigdata">
-                    <img src="./images/bigdata.jpg" alt="메인이미지" width="20%" height="">
+                    <img class="w3-circle" src="./images/bigdata.jpg" alt="메인이미지" width="50%" height="">
                 </div>
                 <div class="action">
                     <h2>나의 대외활동 이력</h2>
                     <!-- table>tr>th*3^tr*3>td*3 -->
-                    <table border="5">
+                    <table>
                         <tr>
                             <th>기간</th>
                             <th>대외활동</th>
@@ -137,8 +182,7 @@
                     <h2>곰 환경을 살리자</h2>
                     <video src="./media/movie.mp4" width="50%" controls></video>
                     <h2>손흥민 활약상</h2>
-                    
-                    <iframe frameborder = "0" width="1280" height="720" src="https://www.youtube.com/embed/pNqfHsppv90" title="[뮤직뱅크 월간 차트 TOP10] 2022년 8월 인기 무대 모음👍 All Stages at Music Bank of KBS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe frameborder = "0" width="670" height="335" src="https://www.youtube.com/embed/W281Xn10AEE" title="《 수리남 》 소름돋았던 '변기태' 시점에서 다시 보기" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </article>
             <article>
@@ -156,11 +200,11 @@
             <div class="login">
                 <h2>로그인</h2>
                 <form action="#" method="post">
-                    회원ID : <input type="text" name="id"><br>
-                    비밀번호 : <input type="password" name="pw"><br>
+                    회원ID : <input type="text" class="button" name="id"><br>
+                    비밀번호 : <input type="password" class="button" name="pw"><br>
                     남자 : <input type="radio" name="gender" value="1"> 여자 : <input type="radio" name="gender" value="2"><br>
-                    <input type="submit" value="로그인"><br>
-                    <input type="reset" value="재설정">
+                    <input type="submit" class="button" value="로그인"><br>
+                    <input type="reset" class="button" value="재설정">
                 </form>
             </div>
         </aside>
@@ -169,6 +213,7 @@
     <footer>
         저작권과 주소
         <div class="sns">
+            <a href="http://www.naver.com">네이버</a>
             <i class="fa-brands fa-facebook"></i>
             <i class="fa-brands fa-twitter"></i>
         </div>
