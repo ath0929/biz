@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>여행 패키지</title>
+    
+    <!-- 제이쿼리 style css -->
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <style>
+        .align-center
+        { 
+            text-align: center;
+        }
+        html {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        .font
+        {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        /* 가은님이 보내주신 스타일 시작 */
+        *{
+            text-decoration: none;
+            border-collapse: collapse;
+            margin: 0px;
+            padding: 0px;
+            color: black;
+        }
+        .content1{
+            line-height: 50px;
+            width: 1180px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        .category{display: flex; list-style: none;}
+        .category > li{
+            margin-right: 50px;
+            font-size: 15px;
+        }
+        .style3{
+            font-weight: bold;
+        }
+        .style2{font-weight: bold; color: black;}
+        a.style3:hover{color: rgb(0, 0, 0);}
+
+
+        #작은제목{
+            margin: 70px 0px 0px 10px;
+        }
+        #작은제목 > p{
+            font-size: 30px;
+            color: rgb(102, 100, 100);
+            font-weight: bold;
+        }
+        #작은제목 > #작은제목2{margin-top: 80px;}
+
+
+
+        .product1{
+            height: auto;
+            width: 1220px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin: auto;
+            display: flex;
+            border-bottom: 1px solid rgb(187, 186, 186);
+            position: relative;
+        }
+        .img사진{margin-top: 11px; border-radius: 5px;
+            box-shadow: 0px 0px 5px rgb(133, 130, 130);
+        }
+        .text1{
+            line-height: 20px;
+            width: 700px; 
+            margin-left: 15px;
+        }
+        .text1 > .설명{color: rgb(69, 177, 105)}
+        .이름{
+            margin-top: 13px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .소개1{font-size: 13px; color: rgb(69, 177, 105); font-weight: 700; margin-top: -10px; margin-left: 3px;}
+        .소개content{
+            margin-top: 10px;
+            line-height: 25px;
+        }
+        .소개content > ul{
+            margin-left: 20px;
+        }
+        .소개content > ul > li{
+            font-size: 12.5px;
+            color: rgb(0, 0, 0);
+        }
+        .소개content > ul > li > a.style1{font-weight: 400;}
+        .소개content > ul > li > a.style1:hover{color: blue;}
+        .소개content > ul > li > a{color: rgb(185, 178, 178);}
+        .topic{display: flex; margin-top: 5px;}
+        .topic1{
+            font-size: 12px;
+            text-align: center;
+            margin: 5px;
+            padding: 0.5px 13px 0.5px 13px;
+            width: auto;
+            border-radius: 8px;
+            background-color: rgb(238, 234, 234);
+        }
+        #bottom{
+            text-align: right;
+            line-height: 13px;
+            color: rgb(44, 42, 42);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        #bottom > #p1{
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: line-through;
+            color: rgb(39, 37, 37);
+            margin: 0px 0px -8px 0px
+        }
+        #bottom > #p2{
+            font-weight: bold;
+            font-size: 12px;
+            color: rgb(59, 57, 57);
+            margin: 0px 0px -8px 0px
+        }
+        #bottom > #p2 > strong{
+            font-weight: bold; 
+            color: rgb(248, 71, 71); 
+            font-size: 21px; 
+            letter-spacing: 1px;
+            margin: 0px 0px -8px 0px
+        }
+        #bottom > a > img{
+            margin-top: 20px; 
+            margin-bottom: 15px;
+            text-align: center;
+            border: 2px solid rgb(172, 169, 169);
+            padding: 8px 20px;
+            border-radius: 20px;
+            background-color: white;
+        }
+        .last{
+            background-color: rgb(170, 163, 163);
+            margin-top: 80px;
+        }
+        .lasttext{
+            font-size: small;
+            margin-left: 40px;
+            padding: 40px;
+            padding: 60px 40px 60px 40px;
+        }
+        /* 가은님이 보내주신 스타일 끝 */
+
+        figure.snip1432 {
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        min-width: 230px;
+        max-width: 315px;
+        width: 100%;
+        background: #000000;
+        color: #ffffff;
+        text-align: left;
+        }
+        figure.snip1432 * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all 0.6s ease;
+        transition: all 0.6s ease;
+        }
+        figure.snip1432 img {
+        opacity: 0.8;
+        width: 100%;
+        vertical-align: top;
+        -webkit-transition: opacity 0.35s;
+        transition: opacity 0.35s;
+        }
+        figure.snip1432 figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        }
+        figure.snip1432 figcaption > div {
+        height: 50%;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        }
+        figure.snip1432 h2,
+        figure.snip1432 h3 {
+        margin: 0;
+        position: absolute;
+        left: 0;
+        padding: 0 30px;
+        text-transform: uppercase;
+        }
+        figure.snip1432 h2 {
+        font-weight: 900;
+        top: 0;
+        }
+        figure.snip1432 h3 {
+        font-size: 1em;
+        bottom: 0;
+        font-weight: 500;
+        }
+        figure.snip1432 h3:nth-of-type(2) {
+        opacity: 0;
+        -webkit-transform: translateY(150%);
+        transform: translateY(150%);
+        }
+        figure.snip1432 a {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        }
+        figure.snip1432:hover img,
+        figure.snip1432.hover img {
+        opacity: 0.3;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        }
+        figure.snip1432:hover figcaption h3:first-of-type,
+        figure.snip1432.hover figcaption h3:first-of-type {
+        -webkit-transform: translateY(150%);
+        transform: translateY(150%);
+        opacity: 0;
+        }
+        figure.snip1432:hover figcaption h3:nth-of-type(2),
+        figure.snip1432.hover figcaption h3:nth-of-type(2) {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+        }
+
+
+    </style>
+</head>
+<body min-width: 500px;>
+    <!-- 메인페이지 -->
+    <div class="font" style="width: 1080px; margin:0 auto;">
+        <div class="font" style="width: 1080px; margin:0 auto; text-align:right"> <a href="login.html" target="_blank" id = "login" onclick="login()">로그인</a>&nbsp;&nbsp;&nbsp;<a href="reg.html" target="_blank" id = "reg" onclick="reg()">회원가입</a>&nbsp;&nbsp;&nbsp;<a href="card.html" target="_blank" id = "card" onclick="card()">결제방식</a></div>
+        <a href="./index.html"><img src="" width="10%" height="8%" alt="My Image" ></a>
+        &nbsp;&nbsp;항공,&nbsp;숙박,&nbsp;관광지를&nbsp;한눈에! 
+        <script>
+            function login()
+            {
+                document.getElementById("login").innerHTML = "";
+            }
+            function reg()
+            {
+                document.getElementById("reg").innerHTML = "";
+            }
+            function card()
+            {
+                document.getElementById("card").innerHTML = "";
+            }
+        </script>
+    </div>
+    <hr style="margin-top: 0px; margin-bottom: 0px;">
+    <div style="text-align: center;"> <!-- 이색섬들 보여주는 서브페이지로 넘어가게 만들어줌 -->
+        <a onclick="window.open(this.href, '_blank', 'width=1225px,height=1000px,toolbars=no,scrollbars=no'); return false;" href="./test2.html"><img src="https://cdn.discordapp.com/attachments/798159603556024350/847766595564339200/202105131019544961410002001020.jpg" alt="My Image" ></a>
+    </div>
+    <div style="width: 1080px; margin:0 auto;">
+        <div id = "mainpage" >
+            <br>
+            <br> 
+            <br>   
+            <br> 
+            <br>    
+            <div style="height: 244px; width: 1080; border:3px solid gray; margin:0 auto; ">    
+                <div class="align-center">
+                    <input type="text" id="datepicker" placeholder="출발 일자" style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" id="datepicker2" placeholder="복귀 일자" style="text-align: center;">
+                </div>
+                <br>
+                <br>
+                <br>
+                <P id="th" class ="font" style="font-size: 40px; text-align: center;"></P> 
+                <br> 
+                <br>   
+                <center>
+                <button id="ath" class ="font" style="font-size: 20px; padding: 1px 7px 1px 7px;"> 날짜 선택 완료 </button>
+                </center>
+                <br>
+            </div>
+            <br> 
+            <br> 
+            <br> 
+            <br> 
+            <br>    
+            <div style="display: flex;">
+                <div>
+                    <figure class="snip1432"><img src="https://cdn.discordapp.com/attachments/798159603556024350/845204397583892490/3_00000.png" alt="sample45" />
+                        <figcaption>
+                        <div>
+                            <h3><span class="font">원하시는 항공을 선택하세요</span></h3>
+                            <h3><span class="font">비행기로 혼저옵서예</span></h3>
+                        </div>
+                        <div>
+                            <h2><span class="font">항공</span></h2>
+                        </div>
+                        </figcaption>
+                        <a href="#" onclick="air()"></a> <!--클릭했을때 air 라는 함수가 실행 되게끔 해준다--> 
+                    </figure>
+                </div>
+                <div class="font" style="padding-left: 108px;">
+                    <figure class="snip1432"><img src="https://cdn.discordapp.com/attachments/798159603556024350/845204395674959943/2_00000.png" alt="sample45" />
+                        <figcaption>
+                        <div>
+                            <h3><span class="font">원하시는 숙박을 선택하세요</span></h3>
+                            <h3><span class="font">편안한 숙박을 위해</span></h3>
+                        </div>
+                        <div>
+                            <h2><span class="font">숙박</span></h2>
+                        </div>
+                        </figcaption>
+                        <a href="#" onclick="hotel()"></a> <!-- 설명 위에 있음-->
+                    </figure>
+                </div>
+                <div  class="font" style="padding-left: 108px;">
+                    <figure class="snip1432"><img src="https://cdn.discordapp.com/attachments/798159603556024350/845204392817852456/1_00000.png" alt="sample45" />
+                        <figcaption>
+                        <div>
+                            <h3><span class="font">원하시는 관광지를 선택하세요</span></h3>
+                            <h3><span class="font">내가 가고싶은 제주를 한눈에</span></h3>
+                        </div>
+                        <div>
+                            <h2><span class="font">관광지</span></h2>
+                        </div>
+                        </figcaption>
+                        <a href="#" onclick="tour()"></a> <!-- 설명 위에 있음-->
+                    </figure>
+                </div>
+            </div>
+            <br>
+            
+            <div class="align-center" style="padding-top: 100px;">
+                <p id = "jang" >장바구니 : </p>
+            </div>
+    
+            <div style="height: 221px; width: 1080; border:3px solid gray; margin:0 auto; ">
+                <div class ="font" style="width: 360px; height: 221px; float:right; text-align: center;">
+                    관광지
+                    <br>
+                    <br>
+                    <p id="rhksrhkd"></p><!-- 장바구니에 선택될 상품들의 자리를 내주기 위해서 그자리에 id를 부여함 -->
+                    <p id="fpwj"></p>
+                    <p id="qkranfrhks"></p>
+                </div>
+    
+                <div class="font" style="width: 360px; height: 221px; float:right; text-align: center;">
+                    숙박
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p id="tnrqkr"></p>
+                </div>
+    
+                <div class="font" style="width: 360px; height: 221px; text-align: center;">
+                    항공
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p id="gkdrhd"></p>
+                </div>
+                <br>
+                <center>
+                <button class="font" style="font-size: 40px; padding: 0px 13px 0px 13px;" onClick="pay()"> 결제하기 </button> <!-- 결제하기를 클릭했을때 pay라는 함수가 실행되게 해준다 -->
+                </center>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <!-- 항공 페이지 시작 처음에는 보이는것처럼 디스플레이 논이 되어있음 메인페이지만 블럭상태 -->
+        <div id="air" style="display: none"> 
+            <div class="content1">
+                <div class="product1">
+                    <div class="img1">
+                        <img class="img사진" src="https://www.autodaily.co.kr/news/photo/201712/400191_23155_3110.jpg" height="170" width="280">
+                    </div>
+                    <div class="text1" class="font">
+                        <p class="이름">동의항공 (Dong-eui Air)</p>
+                        <p class="설명">인천공항<->제주공항 / 왕복티켓</p>
+                        <div class="소개content">
+                            <ul>
+                                <li>위탁수화물 15kg</li>
+                                <li>제휴서비스->제주렌트카 15% 추가 할인</li>
+                                <li>제휴서비스->제주호텔 룸 서비스 20% 추가 할인</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="bottom" class="font">
+                        <p id="p1">￦205,000</p><br><p id="p2">할인판매가: <strong>￦180,000</strong></p>
+                        <a href="#" onclick="t1()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                    </div> <!-- 장바구니 아이콘을 클릭했을때 t1 함수가 실행되게 해준다 -->
+                </div>
+            </div>
+        
+            <div class="content1">
+                <div class="product1">
+                    <div class="img1">
+                        <img class="img사진" src="https://mblogthumb-phinf.pstatic.net/MjAyMDAyMjVfOSAg/MDAxNTgyNTk0NTA4NDIw.UrkQWEipiYm98bwUjJZ6A7E7wYERxI9GojB2N_vq6Hgg.8bGt2exNzvK4zI4qYpgGH6yHNVdov-xsk5yml0ozLA0g.PNG.happydriving/01.png?type=w800" height="170" width="280">
+                    </div>
+                    <div class="text1" class="font">
+                        <p class="이름">한국항공 (Hankook Air)</p>
+                        <p class="설명">여수공항<->제주공항 / 왕복티켓</p>
+                        <div class="소개content">
+                            <ul>
+                                <li>위탁수화물 15kg</li>
+                                <li>제휴서비스->한국항공 마일리지 5% 적립</li>
+                                <li>제휴서비스->공항 리무진 버스 5%할인권 제공</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="bottom" class="font">
+                        <p id="p1">￦195,000</p><br><p id="p2">할인판매가: <strong>￦160,000</strong></p>
+                        <a href="#" onclick="t2()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="content1">
+                <div class="product1">
+                    <div class="img1">
+                        <img class="img사진" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxa4QDf4XZDLMzHKov1mtC4usvrfYl-lgpGw&usqp=CAU" height="170" width="280">
+                    </div>
+                    <div class="text1" class="font">
+                        <p class="이름">부산항공 (Busan Air)</p>
+                        <p class="설명">김포공항->제주공항 / 편도티켓</p>
+                        <div class="소개content">
+                            <ul>
+                                <li>위탁수화물 15kg</li>
+                                <li>제휴서비스->제주렌트카 8% 추가 할인</li>
+                                <li>제휴서비스->한국 운전자 보험-블랙박스 4% 할인특약</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="bottom" class="font">
+                        <p id="p1">￦93,000</p><br><p id="p2">할인판매가: <strong>￦72,000</strong></p>
+                        <a href="#" onclick="t3()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 항공 페이지 끝 -->
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!-- 숙박 페이지 시작 -->
+        <div id = "hotel" style="display:none">
+            <div class="content1">
+                <div class="product1">
+                    <div class="img1">
+                        <img class="img사진" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXq1WIMziA0dMw88UAKyumlzr7eawLk8TZGQ&usqp=CAU" height="170" width="280">
+                    </div>
+                    <div class="text1" class="font">
+                        <p class="이름">제주호텔</p>
+                        <p class="주소">제주특별자치도 서귀포시, 대한민국</p>
+                        <p class="설명">시원하고 쾌적한 객실과 다양한 부대시설 이용으로 일상생활에 지친 몸과 마음을 힐링하십시오.</p>
+                        <div class="소개content">
+                            <ul>
+                                <li>제주공항 차량 20분</li>
+                                <li>체크인: 15:00 / 체크아웃: 11:00</li>
+                                <li>2인 조식 포함</li>
+                                <li>주차 가능</li>
+                                <li>편의시설: 피트니스, 수영장, 카페, 편의점, 노래방</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="bottom" class="font">
+                        <p id="p1">￦350,000</p><br><p id="p2">할인판매가: <strong>￦280,000</strong></p>
+                        <a href="#" onclick="r1()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="content1">
+                <div class="product1">
+                    <div class="img1">
+                        <img class="img사진" src="https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/1jPF/image/f81iQBUQnFzemHB0mWemsk7pq7c.jpg" height="170" width="280">
+                    </div>
+                    <div class="text1" class="font">
+                        <p class="이름">제주폭포 펜션</p>
+                        <p class="주소">제주특별자치도 서귀포시, 대한민국</p>
+                        <p class="설명">서귀포 시내에 위치하여 편의시설 이용 및 교통이 편리한 펜션입니다.</p>
+                        <div class="소개content">
+                            <ul>
+                            <li>천지연폭포 차량 5분</li>
+                                <li>체크인: 15:00 / 체크아웃: 11:30</li>
+                                <li>2인 조식 포함</li>
+                                <li>주차 가능</li>
+                                <li>펜션 서비스: 전자레인지, 정수기, 냉장고, BBQ그릴 제공, 욕실용품 구비</li>
+                                <li>편의시설: 피트니스, 수영장, 카페, 편의점, 노래방</li>
+                            </ul>                        
+                        </div>               
+                    </div>
+                    <div id="bottom" class="font">
+                        <p id="p1">￦210,000</p><br><p id="p2">할인판매가: <strong>￦160,000</strong></p>
+                        <a href="#" onclick="r2()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="content1">
+                <div class="product1">
+                    <div class="img1">
+                        <img class="img사진" src="http://www.newsworker.co.kr/news/photo/202009/85031_96575_5424.jpg" height="170" width="280">
+                    </div>
+                    <div class="text1" class="font">
+                        <p class="이름">애월 풀빌라</p>
+                        <p class="주소">제주시 애월읍, 대한민국</p>
+                        <p class="설명">잔디, 놀이터, 수영장을 보유하여 아이들과 함께 놀기 좋은 신축 풀빌라입니다.</p>
+                        <div class="소개content">
+                            <ul>
+                                <li>애월해안도로 차량 2분</li>
+                                <li>체크인: 16:00 / 체크아웃: 11:00</li>
+                                <li>2인 조식 포함</li>
+                                <li>주차 가능</li>
+                                <li>풀빌라 서비스: 전자레인지, 정수기, 냉장고, BBQ그릴 제공, 욕실용품 구비</li>
+                                <li>복층형 객실, 오션뷰 객실(전객실 오션뷰)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="bottom" class="font">
+                        <p id="p1">￦290,000</p><br><p id="p2">할인판매가: <strong>￦220,000</strong></p>
+                        <a href="#" onclick="r3()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content1">
+                <div class="product1">
+                    <div class="img1">
+                        <img class="img사진" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2s3tzcW9hTEW5hbQ9DvHs_2JsmqBe3wRnhg&usqp=CAU" height="170" width="280">
+                    </div>
+                    <div class="text1" class="font">
+                        <p class="이름">제주에코 리조트</p>
+                        <p class="주소">제주특별자치도 제주시 한림읍, 대한민국</p>
+                        <p class="설명">호텔급 리조트 객실, 바다와 한라산이 보이는 객실을 보유했으며 수영장, 산책로까지 겸비한 리조트입니다.</p>
+                        <div class="소개content">
+                            <ul>
+                                <li>곽지해수욕장 차량 3분</li>
+                                <li>체크인: 15:00 / 체크아웃: 11:00</li>            
+                                <li>주차 가능</li>
+                                <li>편의시설: 수영장, 24시간 편의점</li>
+                                <li>*수영장 사용/하절기 운영(6월~9월 중순)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="bottom" class="font">
+                        <p id="p1">￦450,000</p><br><p id="p2">할인판매가: <strong>￦380,000</strong></p>
+                        <a href="#" onclick="r4()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="content1">
+                <div class="product1">
+                    <div class="img1">
+                        <img class="img사진" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ZIZJLNZYfTlMMo9sQ01KaCjFPXbIvO_D0g&usqp=CAU" height="170" width="280">
+                    </div>
+                    <div class="text1" class="font">
+                        <p class="이름">우도바라기 펜션</p>
+                        <p class="주소">제주특별자치도 우도, 대한민국</p>
+                        <p class="설명">우도에서 유일한 독채 펜션 숙박업소로 프라이버시 보장 가능한 펜션입니다.</p>
+                        <div class="소개content">
+                            <ul>
+                                <li>우도등대공원 차량 5분</li>
+                                <li>산호해수욕장 차량 8분</li>
+                                <li>검멀레해수욕장 차량 1분</li>
+                                <li>체크인: 14:00 / 체크아웃: 11:00</li>
+                                <li>주차 가능</li>
+                                <li>편의시설: 수영장</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="bottom" class="font">
+                        <p id="p1">￦400,000</p><br><p id="p2">할인판매가: <strong>￦320,000</strong></p>
+                        <a href="#" onclick="r5()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <!-- 숙박 페이지 끝 -->
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!-- 관광지 관광 페이지 시작 -->
+        <div id = "tour" style="display:none">
+
+            <!-- 카테고리 부분 -->
+            <div class="content1">
+                <ul class="category" class="font">
+                    <li><a class="style1" href="#" onclick="tour()">관광</a></li> <!-- 카테고리 내부의 관광을 클릭했을때 tour 함수가 실행되게 해준다 -->
+                    <li><a class="style2" href="#" onclick="leisure()">레저</a></li> 
+                    <li><a class="style2" href="#" onclick="museum()">박물관</a></li> 
+                </ul>
+            </div>
+        
+        
+            <div id="작은제목">
+                <p id="작은제목1" class="font">테마상품</p>
+            </div>  
+            <!-- *****1 번째 상품***** -->
+            <div class="content2">
+                <div class="product1">       
+                    <div class="img1">
+                        <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/849961900339101706/dc2.jpg" height="170" width="280">
+                    </div>
+                    <div class="text1">
+                        <p class="이름" class="font">[봄여행 테마] 제주 서부권 프리미엄 투어</p>
+                        <p class="소개1" class="font">제주 핫플레이스 코스로 출발하는 감성 가득 버스여행</p>
+                        <div class="소개content" class="font">
+                            <ul>
+                                <li>섬머리도두봉, 한담해변, 협재해수욕장, 그림카페, 산방산 유채꽃, 총 5곳 방문!</li>
+                                <li>위의 장소 이동시 이용 투어버스 제공</li>
+                                <li>음료 할인권 지급</li>
+                                <li>인생샷 필수아이템! 제주지도프레임 포토카드 증정</li>
+                                <li>특별 선물! 제주 오메기떡 & 삼다수 제공</li>
+                            </ul>
+                        </div>
+                        <div class="topic" class="font">
+                            <p class="topic1">#가족이랑</p>
+                            <p class="topic1">#사랑하는 사람과</p>
+                            <p class="topic1">#친구와</p>
+                            <p class="topic1">#감성여행</p>
+                            <p class="topic1">#따뜻한곳으로~</p>
+                        </div>
+                    </div>
+                    <div id="bottom" class="font">
+                        <p id="p1">￦15,000</p><br><p id="p2">할인판매가: <strong>￦9,900</strong></p>
+                        <a href="#" onclick="q1()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                    </div> <!-- 설명 -->
+                </div>
+            </div>
+        
+            <!-- *****2 번째 상품***** -->
+            <div class="content2">
+                <div class="product1">
+                    <div class="img1">
+                        <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/849966744427954186/2.jpg" height="170" width="280">
+                    </div>
+                    <div class="text1" class="font">
+                        <p class="이름">[별그램 테마] 제주 동부권 프리미엄 투어</p>
+                        <p class="소개1">부담없는 가격으로 제주를 누비며 #인생샷 찍자!</p>
+                        <div class="소개content">
+                            <ul>
+                                <li>노루생태공원, 백약이오름, 보롬왓, 하도해안, 동문시장, 총 5곳 방문!</li>
+                                <li>위의 장소 이동시 이용 투어버스 제공</li>
+                                <li>손님 무료 픽업 및 샌딩 서비스 제공</li>
+                                <li>차량 내 자유롭게 이용가능한 촬영 소품 증정</li>
+                                <li>일정간 NO 쇼핑! NO 옵션!</li>
+                            </ul>
+                        </div>
+                        <div class="topic">
+                            <p class="topic1">#나홀로</p>
+                            <p class="topic1">#가족이랑</p>
+                            <p class="topic1">#친구와</p>
+                            <p class="topic1">#짧게떠나는여행</p>
+                        </div>
+                    </div>
+                    <div id="bottom" class="font">
+                        <p id="p1">￦25,000</p><br><p id="p2">할인판매가: <strong>￦12,000</strong></p>
+                        <a href="#" onclick="q2()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- *****3 번째 상품***** -->
+            <div class="content2">
+                <div class="product1">
+                    <div class="img1">
+                        <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/849969183098011668/2.jpg" height="170" width="280">
+                    </div>
+                    <div class="text1" class="font">
+                        <p class="이름">[효도 테마] 제주 품격 효도 관광</p>
+                        <p class="소개1">보다 여유롭게 즐기는 품격있는 여행을 선사합니다.</p>
+                        <div class="소개content">
+                            <ul>
+                                <li>오설록 티 뮤지엄, 전통예술단공연, 제주절물자연휴양링, 본초 족욕  총 4곳 방문!</li>
+                                <li>공항에서의 픽업 차량 준비</li>
+                                <li>가이드/인솔자 제공</li>
+                                <li>일정 중 1회의 쇼핑센터 방문</li>
+                                <li>전일정 식사포함 및 특식제공</li>
+                            </ul>
+                        </div>
+                        <div class="topic">
+                            <p class="topic1">#효도관광</p>
+                            <p class="topic1">#가족이랑</p>
+                            <p class="topic1">#품격여행</p>
+                        </div>
+                    </div>
+                    <div id="bottom" class="font">
+                        <p id="p1">￦49,000</p><br><p id="p2">할인판매가: <strong>￦41,000</strong></p>
+                        <a href="#" onclick="q3()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                    </div>
+                </div>
+    
+                <div id="작은제목">
+                    <p id="작은제목2" class="font">더 많은 상품</p>
+                </div>
+            </div>
+            <!-- *****4 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/847463056807690260/2.jpg" height="180" width="290">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">제주올레길 스타트 프로젝트 (Jeju Olle Trail)</p>
+                    <p class="소개1">혼자 걷기에는 무섭고, 단체로 걷기에는 부담스러운 분들을 위한! 따로 또 같이 걸어요~</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>가장 인기 있고 아름다운 코스 선별하여 걷기!  1, 3-B, 4, 6, 7코스로 총 다섯코스의 걷기 여행 제공</li>
+                            <li>풍부한 경험의 인솔자 동행</li>
+                            <li>식당이 포함되어 있는 잠시 씻고, 쉴 수 있는 숙박 시설 제공</li>
+                            <li>예약한 숙박 시설로 픽업 서비스 제공</li>
+                            <li>기념품 키트 제공 & 제주 여행지킴이 서비스 제공(선택, 유료)</li>
+                            <li><a class="style1" href="https://www.jejuolle.org/trail/kor/" target="_blank">(→ 올레길 자세히 알아보기)</a></li>
+                        </ul>
+                    </div>
+                    <div class="topic" class="font">
+                        <p class="topic1">#제주올레길</p>
+                        <p class="topic1">#제주걷기</p>
+                        <p class="topic1">#자연경관</p>
+                        <p class="topic1">#휴식, 경치</p>
+                        <p class="topic1">#함께걸을까?!</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦120,000</p><br><p id="p2">할인판매가: <strong>￦65,000</strong></p>
+                    <a href="#" onclick="q4()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+        
+            <!-- *****5 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/849974591640305694/e66312ecfb0a5ca7.jpeg" height="180" width="290">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">제주한라산 둘레길 (사려니숲길)</p>
+                    <p class="소개1">자연을 만나는 환상 숲길, 남녀노소 누구에게나 편한 숲!</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>총 7개의 코스 중 사려니숲길 코스 걷기 여행 제공</li>
+                            <li>풍부한 경험의 인솔자 동행</li>
+                            <li>식당이 포함되어 있는 잠시 씻고, 쉴 수 있는 숙박 시설 제공</li>
+                            <li>예약한 숙박 시설로 픽업 서비스 제공</li>
+                            <li>제주 여행지킴이 서비스 제공(선택, 유료)</li>
+                            <li><a class="style1" href="http://hallatrail.or.kr/salyeonisup" target="_blank">(→ 사려니숲길 자세히 알아보기)</a></li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#한라산둘레길</p>
+                        <p class="topic1">#제주걷기</p>
+                        <p class="topic1">#자연경관</p>
+                        <p class="topic1">#휴식, 경치</p>
+                        <p class="topic1">#삼나무숲길</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦110,000</p><br><p id="p2">할인판매가: <strong>￦63,000</strong></p>
+                    <a href="#" onclick="q5()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+        
+            <!-- *****6 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/849976212042154034/866d3e39909f6822.jpg" height="180" width="290">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">제주 까멜리야힐</p>
+                    <p class="소개1">매혹적인 수국과 함께 언덕위에 가꾸어진 동백수목원</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>뒤로는 한라산, 앞으로는 시원한 바다가 보이는 풍경</li>
+                            <li>80여개 국의 동백나무 500여 품종 6000여 그루가 울창한 숲을 이룸</li>
+                            <li>사진 찍을 수 있는 촬영 소품 제공</li>
+                            <li>제주 카페 할인 쿠폰 제공</li>
+                            <li>까멜리야힐 특별 선물, 마스크팩 제공</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#수국</p>
+                        <p class="topic1">#동백꽃</p>
+                        <p class="topic1">#휴식, 꽃</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦110,000</p><br><p id="p2">할인판매가: <strong>￦63,000</strong></p>
+                    <a href="#" onclick="q6()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+        
+            <!-- *****7 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/849984919811391528/6a7b2773c980fc9c.jpeg" height="180" width="290">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">제주 민속촌</p>
+                    <p class="소개1">제주 전통생활 풍속이 모여있는 가장 제주다운 곳</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>전통혼례체험, 다듬이질 체험, 한복체험 등 다양한 전통체험</li>
+                            <li>민속장터에서 맛보는 제주도 향토 음식</li>
+                            <li>흥나는 민속공연 제공</li>
+                            <li>생활한복체험 제공</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#민속촌</p>
+                        <p class="topic1">#전통가옥</p>
+                        <p class="topic1">#민속공연</p>
+                        <p class="topic1">#생활한복체험</p>
+                        <p class="topic1">#제주향토음식</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦24,900</p><br><p id="p2">할인판매가: <strong>￦19,000</strong></p>
+                    <a href="#" onclick="q7()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+    
+            <!-- *****8 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/849986868149616680/3df9675083935e25.jpeg" height="180" width="290">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">제주 우도 스쿠터 투어</p>
+                    <p class="소개1">여유롭게 힐링하는 색다른 여행</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>제주도의 유인도 8개 중 가장 유명한 우도 여행</li>
+                            <li>우도로 가는 왕복 여객선 제공</li>
+                            <li>여행용 미니 스쿠터 대여(헬멧 및 보호장비 포함)</li>
+                            <li>제주 기념키트 제공</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#제주섬여행</p>
+                        <p class="topic1">#우도여행</p>
+                        <p class="topic1">#바다</p>
+                        <p class="topic1">#스쿠터투어</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦42,000</p><br><p id="p2">할인판매가: <strong>￦35,000</strong></p>
+                    <a href="#" onclick="q8()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+        
+            <!-- *****9 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/849989375710330890/760dbad966284594.jpeg" height="180" width="290">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">신창풍차해안도로 코스 여행</p>
+                    <p class="소개1">해안도로를 따라 맥주와 함께 하는 힐링 여행</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>신창풍차해안도로 + 제주맥주 + 협재해수욕장, 총 3곳 방문</li>
+                            <li>해안도로를 시원히 달릴 수 있는 차량 대여</li>
+                            <li>제주맥주 양조장에서의 체험 제공</li>
+                            <li>제주맥주 할인 혜택</li>
+                            <li>협재해수욕장 근처 숙박시설, 쉬고 씻을 수 있는 공간 제공</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#드라이브</p>
+                        <p class="topic1">#풍차</p>
+                        <p class="topic1">#바다</p>
+                        <p class="topic1">#해안도로</p>
+                        <p class="topic1">#제주맥주</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦36,000</p><br><p id="p2">할인판매가: <strong>￦28,000</strong></p>
+                    <a href="#" onclick="q9()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <!-- 관광지 관광 페이지 끝 --> 
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!-- 관광지 레저 페이지 시작 -->
+        <div id = "leisure" style="display:none">       
+            <!-- 카테고리 부분 -->
+            <div class="content1" class="font">
+                <ul class="category">
+                    <li><a class="style2" href="#" onclick="tour()">관광</a></li>
+                    <li><a class="style1" href="#" onclick="leisure()">레저</a></li>
+                    <li><a class="style2" href="#" onclick="museum()">박물관</a></li>
+                </ul>
+            </div>
+
+
+            <!-- *****1 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/851694915205464084/2021-06-08_142403.jpg" height="170" width="280">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">서귀포 잠수함</p>
+                    <p class="소개1">세계최대 연산호 군락지! 문섬에서 즐기는 바다속 여행</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>서귀포 잠수함, 지아호 승선</li>
+                            <li>다이버쇼, 산호정원 관람 가능</li>
+                            <li>문선 주변 해상관광 가능</li>
+                            <li>도립 해양 공원 입장료 무료 제공</li>
+                            <li>* 낙타트래킹 + 먹이주기 체험 추가 이용 가능!</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#서귀포잠수함</p>
+                        <p class="topic1">#제주바다</p>
+                        <p class="topic1">#난파선</p>
+                        <p class="topic1">#맨드라미산호군락</p>
+                        <p class="topic1">#아름다운해저비경</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦48,000</p><br><p id="p2">할인판매가: <strong>￦37,000</strong></p>
+                    <a href="#" onclick="w1()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+
+            <!-- *****2 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/851695028253753364/0d6d92d5fca8cf8f.jpeg" height="170" width="280">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">제주 체험 다이빙 + 스노쿨링 체험</p>
+                    <p class="소개1">에메랄드빛 바다에서 즐기는 환상의 수중여행, 낭만체험!</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>실제 바다속에서 스쿠버장비를 착용하고 진행하는 스쿠버 다이빙 체험</li>
+                            <li>1인 스노쿨링 체험 제공</li>
+                            <li>스쿠버다이빙이 처음이신 분들을 위한 체험다이빙도 진행</li>
+                            <li>귀요미 캐릭터 후드를 쓰고 수중에서의 특별한 추억 남기기 가능</li>
+                            <li>물고기 먹이 주기 가능 & 사진 찍기 가능</li>
+                            <li>많은 물고기들과 깊은 곳에는 화려한 산호 구경</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#스쿠버다이빙</p>
+                        <p class="topic1">#스노쿨링</p>
+                        <p class="topic1">#제주바다</p>
+                        <p class="topic1">#수중여행</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦160,000</p><br><p id="p2">할인판매가: <strong>￦85,000</strong></p>
+                    <a href="#" onclick="w2()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+
+            <!-- *****3 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/851698344379547648/2.jpeg" height="170" width="280">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">제주 윈드 1947 카트 테마 파크</p>
+                    <p class="소개1">남쪽 한라산의 풍경을 담아 특별한 경험을 선사합니다.</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>한라산의 높이와 동일한 1,947M, 국내 최장의 레이싱 코스</li>
+                            <li>최고 속도 60KM! 경주용 카트로 빠른 속도감 즐길 수 있습니다</li>
+                            <li>시상대 포토부스에서의 기념샷 촬영</li>
+                            <li>1인, 2인 카트 이용 가능</li>
+                            <li>* 순메밀막국수 무료 제공</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#윈드카트</p>
+                        <p class="topic1">#최장코스</p>
+                        <p class="topic1">#빠른속도감</p>
+                        <p class="topic1">#제주남쪽풍경관광</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦25,000</p><br><p id="p2">할인판매가: <strong>￦21,000</strong></p>
+                    <a href="#" onclick="w3()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+
+            <!-- *****4 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/851694979972726794/2021-06-08_142714.jpg" height="170" width="280">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">제주 제트보트 + 행글라이더</p>
+                    <p class="소개1">제주 쇠소깍 제트보트와 행글라이더를 동시에 만나보세요</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>중문 주상절리대 감상이 가능한 쇠소깍 제트보트 체험</li>
+                            <li>하늘 여행, 행글라이더 체험</li>
+                            <li>체험장끼리의 이동수단 제공</li>
+                            <li>중문면세점 할인 혜택! 해녀캐릭터 상품 증정</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#쇠소깍</p>
+                        <p class="topic1">#제트보트</p>
+                        <p class="topic1">#행글라이더</p>
+                        <p class="topic1">#제주바다&하늘</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦24,000</p><br><p id="p2">할인판매가: <strong>￦19,900</strong></p>
+                    <a href="#" onclick="w4()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+
+            <!-- *****5 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/851694995811729428/2021-06-08_142851.jpg" height="170" width="280">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">제주 시원한 바람, 레일 바이크 + 제주랜드 ATV</p>
+                    <p class="소개1">드넓은 초원과 오름, 제주다운 풍경과 함께하는 이색체험</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>120대 각기 다른 이색 레일 바이크 체험</li>
+                            <li>산악오토바이 ATV 체험</li>
+                            <li>용눈이오름, 다랑쉬오름 등 오름과 소떼 관람 가능</li>
+                            <li>제주랜드에서의 승마체험 기회 추가 제공</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#레일바이크</p>
+                        <p class="topic1">#제주랜드</p>
+                        <p class="topic1">#ATV체험</p>
+                        <p class="topic1">#승마</p>
+                        <p class="topic1">#오름관광</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦25,700</p><br><p id="p2">할인판매가: <strong>￦18,300</strong></p>
+                    <a href="#" onclick="w5()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- 관광지 레저 페이지 끝 -->
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <!-- 관광지 박물관 페이지 시작 -->
+        <div id = "museum" style="display:none">
+            <!-- 카테고리 부분 -->
+            <div class="content1" class="font">
+                <ul class="category">
+                    <li><a class="style2" href="#" onclick="tour()">관광</a></li>
+                    <li><a class="style2" href="#" onclick="leisure()">레저</a></li>
+                    <li><a class="style1" href="#" onclick="museum()">박물관</a></li>
+                </ul>
+            </div>
+
+
+            
+            <!-- *****1 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/851711201767456798/f5d942dd003e8a48.jpeg" height="170" width="280">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">제주/서부 아르떼뮤지엄</p>
+                    <p class="소개1">코엑스 "WAVE" 작품으로 유명한 국내 최대 규모 몰입형 미디어아트 전시관</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>빛과 소리가 만들어 낸 10개의 다채로운 미디어아트 전시</li>
+                            <li>빛의 정원에서 만나는 첫 번째 기획전</li>
+                            <li>미디어아트로 즐기는 ARTE TEA BAR 20% 할인</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#제주도뮤지엄</p>
+                        <p class="topic1">#아르떼뮤지엄</p>
+                        <p class="topic1">#인생샷</p>
+                        <p class="topic1">#빛전시</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦19,000</p><br><p id="p2">할인판매가: <strong>￦14,500</strong></p>
+                    <a href="#" onclick="e1()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+
+            <!-- *****2 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/851719917920845834/cea69dd40eb9addc.jpeg" height="170" width="280">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">제주 유리의 성 마법의 숲</p>
+                    <p class="소개1">제주의 자연과 유리가 조화를 이룬 세계적인 유리 테마파크!</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>실내에서 구경가능한 현대유리조형관(총 9가지 테마로 구성)</li>
+                            <li>야외, 아름다운 정원 구경 가능</li>
+                            <li>작은 호수 주변으로 예쁜 포토존, 유리작품 이용한 추억 쌓기</li>
+                            <li>3개의 터널 전시, 바람과 함께 들려오는 은은한 유리 소리</li>
+                            <li>오소록헌 동백길과 유리로 꾸며진 호박마차 관람</li>
+                            <li>유리공예 체험이 가능한 블로잉 체험관, 체험 가능</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#유리의 성</p>
+                        <p class="topic1">#유리공예</p>
+                        <p class="topic1">#인생사진</p>
+                        <p class="topic1">#유리테마파크</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦11,000</p><br><p id="p2">할인판매가: <strong>￦8,900</strong></p>
+                    <a href="#" onclick="e2()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+
+            <!-- *****3 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/851716378394230794/2021-06-08_155629.jpg" height="170" width="280">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">제주 본태 박물관</p>
+                    <p class="소개1">무한 거울방부터 호박까지 유명 작가들의 작품 만나보세요!</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>국내에 몇 안되는 건축가 안도타다오의 건축물부터 피카소까지 다양한 작품들</li>
+                            <li>총 5개의 구역으로 나눠져, 다양한 테마와 분위기 제공</li>
+                            <li>인생사진을 찍을 수 있는 무한 거울의 방</li>
+                            <li>'빛의 마술사' 제임스 터렐 전시 개관</li>
+                            <li>한국의 전통을 볼 수 있는 전시부터 불교 전시까지 자연과 예술을 함께 즐기세요</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#제주박물관</p>
+                        <p class="topic1">#본태박물관</p>
+                        <p class="topic1">#안도타다오</p>
+                        <p class="topic1">#제임스터렐</p>
+                        <p class="topic1">#무한거울의방</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦20,000</p><br><p id="p2">할인판매가: <strong>￦17,900</strong></p>
+                    <a href="#" onclick="e3()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+
+            <!-- *****4 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/851711295107235840/4.jpeg" height="170" width="280">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">제주 세계 자동차 & 피아노 박물관</p>
+                    <p class="소개1">역사와 문화, 예술이 공존하는 자동차+피아노 박물관</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>클래식카부터 경비행기까지 다양한 아시아 최초 개인소장 자동차 전시</li>
+                            <li>오귀스트 로댕이 조각한 전 세계 하나뿐인 피아노를 비롯해 위대한 음악가들이 사랑했던 피아노 전시 </li>
+                            <li>피아노 연주 및 지휘 가능한 복합음악체험 공간 마련</li>
+                            <li>어린이 교통 체험 가능</li>
+                            <li>나만의 오르골을 직접 만들어 볼 수 있는 오르골 만들기 체험 가능</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#자동차박물관</p>
+                        <p class="topic1">#피아노박물관</p>
+                        <p class="topic1">#음악체험</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦13,000</p><br><p id="p2">할인판매가: <strong>￦9,900</strong></p>
+                    <a href="#" onclick="e4()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+
+            <!-- *****5 번째 상품***** -->
+            <div class="product1">
+                <div class="img1">
+                    <img class="img사진" src="https://cdn.discordapp.com/attachments/847454646506487810/851711245802930236/6.jpeg" height="170" width="280">
+                </div>
+                <div class="text1" class="font">
+                    <p class="이름">제주 여미지 식물원</p>
+                    <p class="소개1">아름다운 땅이라는 뜻으로 동양 최대의 온실정원 소유</p>
+                    <div class="소개content">
+                        <ul>
+                            <li>온실정원부터 넓게 펼쳐는 야외정원까지 가진 실내외 식물원</li>
+                            <li>한국, 일본, 이탈리아, 프랑 스 등 각국의 나라 방식으로 재현한 정원 감상</li>
+                            <li>총 2300여 종의 다량의 식물로 이루어져 있다.</li>
+                            <li>* 음료 50% 할인 제공</li>
+                        </ul>
+                    </div>
+                    <div class="topic">
+                        <p class="topic1">#제주식물관</p>
+                        <p class="topic1">#여미지식물원</p>
+                        <p class="topic1">#온실정원</p>
+                        <p class="topic1">#야외정원</p>
+                    </div>
+                </div>
+                <div id="bottom" class="font">
+                    <p id="p1">￦11,000</p><br><p id="p2">할인판매가: <strong>￦8,200</strong></p>
+                    <a href="#" onclick="e5()"><img src="https://cdn.discordapp.com/attachments/847454646506487810/847455238146883604/icon2.jpg" height="25" width="25"></a>
+                </div>
+            </div>
+
+        </div>
+        <!-- 관광지 박물관 페이지 끝 -->
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    </div>
+    <footer>
+        <div class="last">
+            <div class="lasttext" class="font">
+                <p>브랜드 이름(주)안태후</p>
+                <p>20181217</p>
+                <p>부산광역시 부산진구 엄광로 176</p>
+                <p>email: deu@naver.com</p>
+                <p>055-123-123</p>
+            </div>
+        </div>
+    </footer>
+   
+    <!-- 메인페이지 끝 -->
+
+    <script>
+        var gomonth; // 가는 달
+        var goday; // 가는 날짜 
+        var backmonth; // 돌아오는 달
+        var backday; // 돌아오는 날짜
+        var go;// 데이트피커의 정보가들어간 원본 가는날
+        var back;// 데이트피커의 정보가들어간 원본 복귀날
+        
+        function pay()
+        {
+            if (gomonth != undefined || goday != undefined || backmonth != undefined || backday != undefined) 
+            {
+                alert("이 패키지는  "+gomonth+"월"+goday+"부터 "+backmonth+"월"+backday+"까지입니다 구매하시겠습니까?");
+                alert("결제되었습니다");
+            }
+            else 
+            {
+                alert("오류");
+            }
+
+        }
+        
+        function tour() //display="none"은 해당요소를 화면에 아예 표시하지 않게 해준다 처음에는 블럭이 되어있는상태 모든요소들이
+        {
+            document.getElementById("mainpage").style.display="none";
+            document.getElementById("museum").style.display="none";
+            document.getElementById("leisure").style.display="none";
+            document.getElementById("tour").style.display="block";
+        }
+        function leisure()
+        {
+            document.getElementById("mainpage").style.display="none";
+            document.getElementById("museum").style.display="none";
+            document.getElementById("leisure").style.display="block";
+            document.getElementById("tour").style.display="none";
+        }
+        function museum()
+        {
+            document.getElementById("mainpage").style.display="none";
+            document.getElementById("museum").style.display="block";
+            document.getElementById("leisure").style.display="none";
+            document.getElementById("tour").style.display="none";
+        }
+        function hotel() //설명 겟엘리멘트바이아이디가 메인페이지라는 아이디값을 가져온다 
+        {
+            document.getElementById("mainpage").style.display="none";
+            document.getElementById("hotel").style.display="block";
+        }
+        function air() //설명
+        {
+            document.getElementById("mainpage").style.display="none";
+            document.getElementById("air").style.display="block";
+        }
+        function q1() // 어떤태그든 그사이에 제주서부권프리미엄투어 라고 텍스트가 입력되게끔 만들어준다
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("tour").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주 서부권 프리미엄 투어";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주 서부권 프리미엄 투어";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주 서부권 프리미엄 투어";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function q2()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("tour").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주 동부권 프리미엄 투어";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주 동부권 프리미엄 투어";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주 동부권 프리미엄 투어";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function q3()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("tour").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주 품격 효도 관광";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주 품격 효도 관광";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주 품격 효도 관광";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function q4()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("tour").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주올레길 스타트 프로젝트";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주올레길 스타트 프로젝트";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주올레길 스타트 프로젝트";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function q5()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("tour").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주한라산 둘레길";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주한라산 둘레길";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주한라산 둘레길";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function q6()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("tour").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주 까멜리야힐";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주 까멜리야힐";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주 까멜리야힐";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function q7()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("tour").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주 민속촌";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주 민속촌";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주 민속촌";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function q8()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("tour").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주 우도 스쿠터 투어";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주 우도 스쿠터 투어";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주 우도 스쿠터 투어";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function q9()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("tour").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "신창풍차해안도로 코스 여행";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "신창풍차해안도로 코스 여행";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "신창풍차해안도로 코스 여행";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function w1()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("leisure").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "서귀포 잠수함";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "서귀포 잠수함";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "서귀포 잠수함";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function w2()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("leisure").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주 체험 다이빙 + 스노쿨링 체험";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주 체험 다이빙 + 스노쿨링 체험";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주 체험 다이빙 + 스노쿨링 체험";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function w3()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("leisure").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주 윈드 1947 카트 테마 파크";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주 윈드 1947 카트 테마 파크";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주 윈드 1947 카트 테마 파크";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function w4()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("leisure").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주 제트보트 + 행글라이더";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주 제트보트 + 행글라이더";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주 제트보트 + 행글라이더";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function w5()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("leisure").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주 시원한 바람, 레일 바이크 + 제주랜드 ATV";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주 시원한 바람, 레일 바이크 + 제주랜드 ATV";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주 시원한 바람, 레일 바이크 + 제주랜드 ATV";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function e1()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("museum").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주/서부 아르떼뮤지엄";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주/서부 아르떼뮤지엄";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주/서부 아르떼뮤지엄";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function e2()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("museum").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주 유리의 성 마법의 숲";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주 유리의 성 마법의 숲";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주 유리의 성 마법의 숲";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function e3()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("museum").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주 본태 박물관";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주 본태 박물관";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주 본태 박물관";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function e4()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("museum").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주 세계 자동차 & 피아노 박물관";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주 세계 자동차 & 피아노 박물관";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주 세계 자동차 & 피아노 박물관";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function e5()
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("museum").style.display="none";
+
+
+            if  (document.getElementById("rhksrhkd").innerHTML == "")
+            {
+                document.getElementById("rhksrhkd").innerHTML = "제주 여미지 식물원";
+            }
+            else if (document.getElementById("fpwj").innerHTML == "")
+            {
+                document.getElementById("fpwj").innerHTML = "제주 여미지 식물원";
+            }
+            else if (document.getElementById("qkranfrhks").innerHTML == "")
+            {
+                document.getElementById("qkranfrhks").innerHTML = "제주 여미지 식물원";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function r1() //설명
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("hotel").style.display="none";
+
+
+            if  (document.getElementById("tnrqkr").innerHTML == "")
+            {
+                document.getElementById("tnrqkr").innerHTML = "제주호텔";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function r2() //설명
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("hotel").style.display="none";
+
+
+            if  (document.getElementById("tnrqkr").innerHTML == "")
+            {
+                document.getElementById("tnrqkr").innerHTML = "제주폭포 펜션";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function r3() //설명
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("hotel").style.display="none";
+
+
+            if  (document.getElementById("tnrqkr").innerHTML == "")
+            {
+                document.getElementById("tnrqkr").innerHTML = "애월 풀빌라";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function r4() //설명
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("hotel").style.display="none";
+
+
+            if  (document.getElementById("tnrqkr").innerHTML == "")
+            {
+                document.getElementById("tnrqkr").innerHTML = "제주에코 리조트";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function r5() //설명
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("hotel").style.display="none";
+
+
+            if  (document.getElementById("tnrqkr").innerHTML == "")
+            {
+                document.getElementById("tnrqkr").innerHTML = "우도바라기 펜션";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function t1() //설명
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("air").style.display="none";
+
+
+            if  (document.getElementById("gkdrhd").innerHTML == "")
+            {
+                document.getElementById("gkdrhd").innerHTML = "동의항공";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function t2() //설명
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("air").style.display="none";
+
+
+            if  (document.getElementById("gkdrhd").innerHTML == "")
+            {
+                document.getElementById("gkdrhd").innerHTML = "한국항공";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        function t3() //설명
+        {
+            document.getElementById("mainpage").style.display="block";
+            document.getElementById("air").style.display="none";
+
+
+            if  (document.getElementById("gkdrhd").innerHTML == "")
+            {
+                document.getElementById("gkdrhd").innerHTML = "부산항공";
+            }
+            else{
+                alert("구매 가능한 갯수를 초과했습니다");
+            }
+        }
+        // Date Picker
+        // 설명 datepicker라는 기능을 가져왔다 
+        $(".hover").mouseleave(
+        function () {
+            $(this).removeClass("hover");
+        });
+
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+
+        $(function () {
+            $("#datepicker2").datepicker();
+        });
+
+        $("#ath").click(function(){
+            // datepicker=웹에 보이는 달력 출발날짜를 d에 저장, 복귀날짜를 s에 저장
+            d = $('#datepicker').datepicker('getDate');
+            s = $('#datepicker2').datepicker('getDate');
+            // go에 텍스트 형식으로 출발날짜를 저장, back에 복귀날짜를 저장
+            go = d.toString(); 
+            back = s.toString();
+            confirm();
+        });
+        function confirm()
+        {   
+            var goall = go.split(" ")
+
+            var backall = back.split(" ");
+            // 영어라서 숫자로 바꿔줘야했음
+            
+            gomonth = goall[1];
+            if (gomonth == "Jan")
+            {
+                gomonth = "1"
+            }
+            else if (gomonth == "Feb")
+            {
+                gomonth = "2"
+            }
+            else if (gomonth == "Mar")
+            {
+                gomonth = "3"
+            }
+            else if (gomonth == "Apr")
+            {
+                gomonth = "4"
+            }
+            else if (gomonth == "May")
+            {
+                gomonth = "5"
+            }
+            else if (gomonth == "Jun")
+            {
+                gomonth = "6"
+            }
+            else if (gomonth == "Jul")
+            {
+                gomonth = "7"
+            }
+            else if (gomonth == "Aug")
+            {
+                gomonth = "8"
+            }
+            else if (gomonth == "Sep")
+            {
+                gomonth = "9"
+            }
+            else if (gomonth == "Oct")
+            {
+                gomonth = "10"
+            }
+            else if (gomonth == "Nov")
+            {
+                gomonth = "11"
+            }
+            else if (gomonth == "Dec")
+            {
+                gomonth = "12"
+            }
+            else{
+                gomonth = "알 수 없음"
+            }
+            goday = goall[2];
+
+            backmonth = backall[1];
+            if (backmonth == "Jan")
+            {
+                backmonth = "1"
+            }
+            else if (backmonth == "Feb")
+            {
+                backmonth = "2"
+            }
+            else if (backmonth == "Mar")
+            {
+                backmonth = "3"
+            }
+            else if (backmonth == "Apr")
+            {
+                backmonth = "4"
+            }
+            else if (backmonth == "May")
+            {
+                backmonth = "5"
+            }
+            else if (backmonth == "Jun")
+            {
+                backmonth = "6"
+            }
+            else if (backmonth == "Jul")
+            {
+                backmonth = "7"
+            }
+            else if (backmonth == "Aug")
+            {
+                backmonth = "8"
+            }
+            else if (backmonth == "Sep")
+            {
+                backmonth = "9"
+            }
+            else if (backmonth == "Oct")
+            {
+                backmonth = "10"
+            }
+            else if (backmonth == "Nov")
+            {
+                backmonth = "11"
+            }
+            else if (backmonth == "Dec")
+            {
+                backmonth = "12"
+            }
+            else{
+                backmonth = "알 수 없음"
+            }
+            backday = backall[2];
+            // 어차피 숫자라서 바꿔줄 필요 없었음
+
+            gomonth = parseInt(gomonth);
+            goday = parseInt(goday);
+            backmonth = parseInt(backmonth);
+            backday = parseInt(backday);
+            // INT(숫자)로 바꾸는 과정
+            // 출발날짜가 복귀날짜보다 빠르지 않게 오류를 수정하는 계산식
+            if (gomonth*100+goday > backmonth*100+backday)
+            {
+                document.getElementById("th").innerHTML = "오류 다시 선택하세요";
+                gomonth = 0;
+                goday = 0;
+                backmonth = 0;
+                backday = 0;
+            }
+            else
+            {
+                document.getElementById("th").innerHTML ="출발 날짜 : "+gomonth+"월"+"  "+goday+"일  >  " +  "  복귀 날짜 : "+backmonth+"월"+"  "+backday+"일";
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
+<!-- "출발 날짜 : "+gomonth+"월"+"  "+goday+"일  >  " +  "  복귀 날짜 : "+backmonth+"월"+"  "+backday+"일"; -->
