@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WLZM47X');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXMCNJFCE8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GXMCNJFCE8');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="GA, 블로그 IT 관련 블로그, e비즈니스">
+    <meta name="author" content="joo hyeong geun">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./css/mystyle.css" type="text/css">
+    <title>Welcome to taehu</title>
+    <script>
+        function validateform(){
+            let x = document.forms["userform"]["id"].value;
+            let y = document.forms["userform"]["pw"].value;
+            if(x == "")
+            {
+                alert("회원id 입력")
+                userform.id.focus();
+                return false;
+            }
+            else if(y == "")
+            {
+                alert("회원pw 입력")
+                userform.pw.focus();
+                return false;
+            }
+            else
+            {
+                alert("회원가입 완료")
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLZM47X"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header id ="home">
+        <i class="fa-solid fa-burger"></i>
+        <h1>taehu site</h1>
+    </header>
+    <nav>
+        <!-- 점 -->
+        <!-- ul>li*4{메인메뉴$$} -->
+        <ul>
+            <li><a href="./index.html">소개</a></li>
+            <li><a href="./shop/computer.html">쇼핑</a></li>
+            <li><a href="./event/event.html">이벤트</a></li>
+            <li><a href="">커뮤니티</a></li>
+        </ul>
+        <!-- 숫자 -->
+        <!-- ol>li*3{연습$} -->
+        <ol type="i">
+            <li>연습1</li>
+            <li>연습2</li>
+            <li>연습3</li>
+        </ol>
+    </nav>
+    <section>
+        <div class="content">
+            <article>
+                <div class="bigdata">
+                    <img class="w3-circle" src="./images/bigdata.jpg" alt="메인이미지" width="50%" height="">
+                </div>
+                <div class="action">
+                    <h2>나의 대외활동 이력</h2>
+                    <!-- table>tr>th*3^tr*3>td*3 -->
+                    <table class="w3-table-all w3-hoverable">
+                        <tr>
+                            <th>기간</th>
+                            <th>대외활동</th>
+                            <th>주최</th>
+                        </tr>
+                        <tr>
+                            <td>2021.3</td>
+                            <td>마케팅경진대회</td>
+                            <td>정보학회</td>
+                        </tr>
+                        <tr>
+                            <td>2022.5</td>
+                            <td>GA 교육프로그램</td>
+                            <td>동의대학교</td>
+                        </tr>
+                        <tr>
+                            <td>2022.8</td>
+                            <td>온라인 쇼핑몰 기획 공모전</td>
+                            <td>중소기업청</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+            <br><hr><br>
+            <article>
+                <div class="media">
+                    <h2>좋아하는 음악</h2>
+                    <audio src="./media/music01.mp3" controls></audio>
+                    <h2>곰 환경을 살리자</h2>
+                    <video src="./media/movie.mp4" width="50%" controls></video>
+                    <h2>손흥민 활약상</h2>
+                    <iframe frameborder = "0" width="670" height="335" src="https://www.youtube.com/embed/W281Xn10AEE" title="《 수리남 》 소름돋았던 '변기태' 시점에서 다시 보기" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </article>
+            <article>
+                <div class="gallery">
+                    <iframe src="./gallery.html" frameborder="0" width="70%" height="220px"></iframe>
+                </div>
+            </article>
+        </div>
+        <aside>
+            <div class="link">
+                <a href="http://mis.deu.ac.kr" target="_blank">경영정보학과 사이트</a><br>
+                <a href="./gallery.html">갤러리</a><br>
+                <a href="#home">시작이동</a>
+            </div>
+            <div class="login">
+                <h2>로그인</h2>
+                <form action="#" method="post" name="userform" onsubmit="validateform()">
+                    회원ID : <input type="text" name="id" class="w3-input" ><br>
+                    비밀번호 : <input type="password" name="pw" class="w3-input"><br>
+                    남자 : <input type="radio" name="gender" value="1" class="w3-radio"> 여자 : <input type="radio" name="gender" value="2" class="w3-radio"><br>
+                    <input type="submit" value="로그인" class="w3-button w3-blue"><br>
+                    <input type="reset" value="재설정" class="w3-button w3-blue">
+                </form>
+            </div>
+        </aside>
+    </section>
+    <footer>
+        저작권과 주소
+        <div class="sns">
+            <a href="http://www.naver.com"><i class="fa-brands fa-facebook"></i></a>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </footer>
+</body>
+
+</html>
